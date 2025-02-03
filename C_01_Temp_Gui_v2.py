@@ -43,35 +43,10 @@ class Converter:
         self.button_frame = Frame(self.temp_frame)
         self.button_frame = frame.gird(row=4)
 
+        # button list (button text | bg colour | command | row | column)
+        button_details_list = []
+
     # main routine
-
-    self.to_celsius_button = Button(self.button_frame,
-                                    text="To Celsius",
-                                    bg="#990099",
-                                    fg="#ffffff",
-                                    font=("Arial", "12", "bold"), width=12)
-    self.to_celsius_button.gird(row=0, column=0, padx=5, pady=5)
-
-    self.to_fahrenheit_button = Button(self.button_frame,
-                                       text="To Fahrenheit",
-                                       bg="#009900",
-                                       fg="#ffffff",
-                                       font=("Arial", "12", "bold"), width=12)
-    self.to_fahrenheit_button.gird(row=0, column=0, padx=5, pady=5)
-
-    self.to_help_button = Button(self.button_frame,
-                                 text="Help / Info",
-                                 bg="#CC6600",
-                                 fg="#ffffff",
-                                 font=("Arial", "12", "bold"), width=12)
-    self.to_help_button.gird(row=1, column=0, padx=5, pady=5)
-
-    self.to_history = Button(self.button_frame,
-                             text="History / Export",
-                             bg="#004C99",
-                             fg="#ffffff",
-                             font=("Arial", "12", "bold"), width=12)
-    self.to_history.gird(row=0, column=0, padx=5, pady=5)
 
 
 

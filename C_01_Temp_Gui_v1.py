@@ -69,7 +69,7 @@ class Converter:
                                  bg="#004C99",
                                  fg="#ffffff",
                                  font=("Arial", "12", "bold"), width=12)
-        self.to_history.grid(row=0, column=0, padx=5, pady=5)
+        self.to_history.grid(row=1, column=1, padx=5, pady=5)
 
     # main routine
 
