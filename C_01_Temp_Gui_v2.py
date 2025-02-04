@@ -27,7 +27,7 @@ class Converter:
                                        text=instructions,
                                        wraplength=250, width=40,
                                        justify="left")
-        self.temp_instructions.gird(row=1)
+        self.temp_instructions.grid(row=1)
 
         self.temp_entry = Entry(self.temp_frame,
                                 font=("Arial", "14"))
@@ -41,13 +41,31 @@ class Converter:
 
         # Conversion, help and history / export buttons
         self.button_frame = Frame(self.temp_frame)
-        self.button_frame = frame.gird(row=4)
+        self.button_frame.grid(row=4)
 
         # button list (button text | bg colour | command | row | column)
-        button_details_list = []
+        button_details_list = [
+            ["To Celsius", "#9c0000", "", 0, 0],
+            ["To Fahrenheit", "#009c87", "", 0, 1],
+            ["Help / Info", "#CC6600", "", 1, 0],
+            ["History / Export", "#17009c", "", 1, 1]
+        ]
+
+        # Liat to hold buttons once they have been made
+        self.button_ref_list = []
+
+        for item in button_details_list:
+            self.make_button = Button(self.button_frame,
+                                      text=item[0], bg=item[1],
+                                      fg="#FFFFFF", font=("Arial", "12", "bold"),
+                                      width=12, command=item[2])
+            self.make_button.grid(row=item[3], column=item[4], padx=5, pady=5)
+
+            self.button_ref_list.append(self.make_button)
+
+        self.to_history_button = self.button_ref_list[3].config(state=DISABLED)
 
     # main routine
-
 
 
 if __name__ == '__main__':
