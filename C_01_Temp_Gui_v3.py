@@ -72,17 +72,36 @@ class Converter:
 
         # Retrieve temperature to be converted
         to_convert = self.temp_entry.get()
-        print("to convert", to_convert)
 
+        # Rest label and entry box (if we had an error)
+        self.answer_error.config(fg="004C99")
+        self.temp_entry.config(bg="#FFFFFF")
+
+        # checks that amount to be converted is a number above absolute zero
         try:
             to_convert = float(to_convert)
             if to_convert >= min_temp:
-                self.temp_error.config(text="You are OK")
+                error = ""
+                self.convert(min_temp)
             else:
-                self.temp_error.config(text="Too Low!")
+                error= "Too Low"
 
         except ValueError:
-            self.temp_error.config(text="Please enter a number!")
+            error ="Please enter a number"
+
+        # display the error if necesary
+        if error != "":
+            self.answer_error.config(text= error, fg="#9C0000")
+            self.temp_entry.config(bg="#F4CCCC")
+            self.temp_entry.delete(0, END)
+
+    def convert(self, min_temp):
+
+        if min_temp == c.ABS_ZERO_CELSIUS:
+            self.answer_error.config(text="Conveting to F")
+        else:
+            self.answer_error.config(text="Conveting to C")
+
 
 
 # main routine
