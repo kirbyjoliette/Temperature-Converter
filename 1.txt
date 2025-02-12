@@ -1,0 +1,11 @@
+**** Temperature Calculations ****
+
+Generated: 09/02/2025
+
+Here is your calculation history (oldest to newest)...
+
+23 F° is -5 C°
+34 C° is 93 F°
+34 C° is 93 F°
+34 F° is 1 C°
+
