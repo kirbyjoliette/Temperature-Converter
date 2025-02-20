@@ -1,0 +1,11 @@
+**** Temperature Calculations ****
+
+Generated: 14/02/2025
+
+Here is your calculation history (oldest to newest)...
+
+20 F° is -7 C°
+20 C° is 68 F°
+30 F° is -1 C°
+30 C° is 86 F°
+

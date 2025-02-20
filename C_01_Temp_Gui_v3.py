@@ -84,14 +84,14 @@ class Converter:
                 error = ""
                 self.convert(min_temp)
             else:
-                error= "Too Low"
+                error = "Too Low"
 
         except ValueError:
-            error ="Please enter a number"
+            error = "Please enter a number"
 
         # display the error if necesary
         if error != "":
-            self.answer_error.config(text= error, fg="#9C0000")
+            self.answer_error.config(text=error, fg="#9C0000")
             self.temp_entry.config(bg="#F4CCCC")
             self.temp_entry.delete(0, END)
 
@@ -101,7 +101,6 @@ class Converter:
             self.answer_error.config(text="Conveting to F")
         else:
             self.answer_error.config(text="Conveting to C")
-
 
 
 # main routine
